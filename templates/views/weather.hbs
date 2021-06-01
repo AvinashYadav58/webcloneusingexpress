@@ -43,6 +43,9 @@
     <script src="js/main.js"></script>
     <script>
         const day = document.getElementById('day');
+        const today_date = document.getElementById('today_date');
+
+
         const getCurrentDay = () => {
             var weekday = new Array(7);
             weekday[0] = "Sunday";
@@ -59,6 +62,29 @@
             day.innerText = days;
         };
         getCurrentDay();
+        const getCurrentTime = () => {
+            var months = [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "June",
+                "July",
+                "Aug",
+                "Sept",
+                "Oct",
+                "Nov",
+                "Dec"
+            ];
+            var now = new Date();
+            var date = now.getDate();
+            var month = months[now.getMonth()];
+            today_date.innerText = `${date} -- ${month}`;
+        };
+        getCurrentTime();
+
+       // today_date.innerHTML = getCurrentTime()
     </script>
 </body>
 
